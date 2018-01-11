@@ -32,3 +32,5 @@ let insertData = (db, data, callback) => {
     });
 }
 getData(20180111)
+// 目前数据库爬到了20161030
+// 等到需要的时候再继续吧
