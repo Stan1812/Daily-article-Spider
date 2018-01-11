@@ -1,3 +1,5 @@
+// 使用linux定时任务Crontab
+//  * */01 * * * /root/.nvm/versions/node/v8.8.0/bin/node /this file 
 const http = require('http');
 const request = require('request');
 
