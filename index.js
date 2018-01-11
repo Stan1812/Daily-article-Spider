@@ -10,7 +10,7 @@ const log = console.log
 let getData = (date) => {
     request(`https://interface.meiriyiwen.com/article/day?dev=1&date=${date}`, (error, response, body) => {
         body = JSON.parse(body)
-        console.log(body.data.title,body.data.author,data.date.curr)
+        console.log(body.data.title,body.data.author,body.data.date.curr)
         MongoClient.connect(url, body, (err, db) => {
             if (err) throw err
             insertData(db, body, (result) => {
