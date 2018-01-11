@@ -21,13 +21,26 @@ let getData = (date) => {
     })
 }
 let insertData = (db, data, callback) => {
-    var collection = db.collection('arts');
+    let collection = db.collection('items');
     collection.insert(data, (err, result) => {
         if (err) {
             console.log('Error:' + err);
             return;
-        }else    getData(data.data.date.prev)
+        }else
         callback(result);
     });
 }
-getData(20170914)
+let getNowFormatDate = ()=> {
+    let date = new Date();
+    let month = date.getMonth() + 1;
+    let strDate = date.getDate();
+    if (month >= 1 && month <= 9) {
+        month = "0" + month;
+    }
+    if (strDate >= 0 && strDate <= 9) {
+        strDate = "0" + strDate;
+    }
+    let currentdate = date.getFullYear()  + month  + strDate
+    return currentdate;
+}
+getData(getNowFormatDate())
