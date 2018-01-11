@@ -37,7 +37,7 @@ let getData = (date) => {
     })
 }
 let insertData = (db, data, callback) => {
-    let collection = db.collection('items')
+    let collection = db.collection('arts')
     collection.insert(data, (err, result) => {
         if (err) {
             console.log('Error:' + err)
