@@ -12,7 +12,7 @@ const log = console.log
 
 let addlog = (val, addDate = true) => {
     addDate ? val = new Date().toString() + ':\t' + val : val = val + '\n'
-    fs.appendFile('artcle.log', val, (err) => {
+    fs.appendFile('article.log', val, (err) => {
         if (err) {
             return console.error(err)
         }
