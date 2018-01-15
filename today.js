@@ -1,5 +1,6 @@
 // 使用linux定时任务Crontab
-//  * */01 * * * /root/.nvm/versions/node/v8.8.0/bin/node /this file 
+//  * */01 * * * node /this file
+// 2 0 * * * /root/.nvm/versions/node/v8.8.0/bin/node /home/art-spider/Daily-article-spider/today.js
 const http = require('http')
 const fs = require('fs')
 
